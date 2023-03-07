@@ -2,7 +2,7 @@ import Todo from './Todo.js';
 
 export function fillList() {
   const todoList = document.getElementById('todo-list');
-  todoList.innerHTML = '';
+  // todoList.innerHTML = '';
 
   Todo.list.forEach((item) => {
     const listItem = document.createElement('li');
@@ -15,8 +15,10 @@ export function fillList() {
       <textarea class="text-area" maxlength="30">${item.description}</textarea>
       <button type ="button" id="delete">&CircleTimes;</button>
       `;
-
-    todoList.appendChild(listItem);
+    if(todoList){
+      todoList.appendChild(listItem);
+    }
+    
 
     const checkbox = listItem.querySelector('input');
     const text = listItem.querySelector('span');
