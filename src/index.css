@@ -46,7 +46,7 @@ li {
 }
 
 .list-title,
-.add-input,
+#add-input,
 .item-container {
   padding: 15px;
   border-bottom: 1px solid #b5b5b5;
